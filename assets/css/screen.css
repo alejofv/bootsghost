@@ -751,62 +751,15 @@ margin on the iframe, cause it breaks stuff. */
 }
 
 .tag-archive-header {
-    /*padding: 20px 0;*/
     text-align: left;
     /*max-width: 700px;*/
-    /*margin: 4rem auto;*/
-    border-bottom: 1px solid #EBF2F6;
+    margin: 4rem auto;
     position: relative;
-}
-
-.tag-archive-header:after {
-    display: block;
-    content: "";
-    width: 7px;
-    height: 7px;
-    border: #E7EEF2 1px solid;
-    position: absolute;
-    bottom: -5px;
-    left: 50%;
-    margin-left: -5px;
-    background: #fff;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    border-radius: 100%;
-    box-shadow: #fff 0 0 0 5px;
 }
 
 .archive-template .blog-title {
     display: inline-block;
     padding: 2.5rem 0;
-}
-
-
-/* CUSTOM */
-.post .post-meta-text {
-    color: #b3b3b1;
-    font-weight: 400;
-    font-style: normal;
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-}
-
-.post .author-image {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    margin-right: 8px;
-    margin-bottom: -10px;
-    float: left;
-    background-size: cover;
-    border-radius: 100%;
-    text-indent: -9999px;
-}
-
-.post .author-name {
-    display: inline;
 }
 
 
@@ -834,13 +787,11 @@ margin on the iframe, cause it breaks stuff. */
 /* The main wrapper for our pagination links */
 .ghost-pagination {
     position: relative;
-    width: 80%;
-    max-width: 700px;
     margin: 4rem auto;
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
-    text-align: center;
+    text-align: right;
 }
 
 .ghost-pagination a {

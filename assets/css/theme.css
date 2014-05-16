@@ -1,4 +1,47 @@
+a:hover {
+    text-decoration: none;
+}
+
+hr.post-index {
+    margin: 0;
+}
+
 .index-date {
     text-align: center;
     margin: 1.8em 0;
+}
+
+.blog-meta a {
+    color: #BBC7CC;
+    font-size: 1.5em;
+    display: inline-block;
+    margin: 0.3em 0.5em;
+}
+.blog-meta a:hover {
+    text-decoration: none;
+}
+
+.post-meta-text {
+    color: #b3b3b1;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 0.8em;
+    margin: 0.5em 0 1em 0;
+}
+
+.post .author-image {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    margin-right: 8px;
+    margin-bottom: -10px;
+    float: left;
+    background-size: cover;
+    border-radius: 100%;
+    text-indent: -9999px;
+}
+
+.post .author-name {
+    display: inline;
 }

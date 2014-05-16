@@ -10,18 +10,21 @@
         {{! Everything inside the #post tags pulls data from the post }}
         {{#post}}
 
-            <h1 class="post-title">{{{title}}}</h1>
+            <p class="pull-right">
+                <a class="btn btn-default" href="/"><small><i class="fa fa-angle-left"></i>&nbsp;Back to overview</small></a>
+            </p>
+            <h2>{{{title}}}</h2>
         
             <div class="post-meta-text">
-                <p class="pull-right"><a href="/"><small><i class="fa fa-angle-left"></i>&nbsp;Back to overview</small></a></p>
                 <p>
-                    <small>
-                        <a href="{{author.website}}" rel="author" itemprop="url name">{{author.name}}</a> on
-                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-                    </small>
+                    <a href="{{author.website}}" rel="author" itemprop="url name">{{author.name}}</a> on
+                    <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+                    &nbsp;&bull;&nbsp;Tags:
+                    {{tags separator=" &bull; "}}
                 </p>
+                <br class="clearfix"/>
             </div>
-            <br class="clearfix" />
+            
 
             <section class="post-content">
                 {{content}}

@@ -7,22 +7,35 @@
 <main class="content" role="main">
 
     <header class="tag-archive-header">
-        <h1>{{tag.name}}</h1>
+        <p class="pull-right">
+            <a class="btn btn-default" href="/"><small><i class="fa fa-angle-left"></i>&nbsp;Back to all</small></a>
+        </p>
+        <div class="post-meta-text">
+            <p>Posts about <strong>{{tag.name}}</strong></p>
+        </div>
     </header>
 
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
 
-    <article class="{{post_class}}">
-        <header class="post-header">
-            <span class="post-meta"><time datetime="{{date format='YYYY-MM-DD'}}">{{date format="DD MMM YYYY"}}</time> {{tags prefix="on "}}</span>
-            <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
+        <div class="row">
+            <div class="col-xs-2">
+                <div class=" index-date">
+                    <span class="label label-primary">{{date format="DD"}} <small>{{date format="MMM"}}</small>
+                        <time datetime="{{date format='YYYY-MM-DD'}}"></time>
+                    </span>
+                </div>
+            </div>
+            <div class="col-xs-10">
+                <article>
+                    <header class="post-header">
+                        <h2><a href="{{url}}">{{{title}}}</a></h2>
+                    </header>
+                </article>
+            </div>
+        </div>
 
-        </header>
-        <section class="post-excerpt">
-            <p>{{excerpt}}&hellip;</p>
-        </section>
-    </article>
+        <hr class="post-index" />
 
     {{/foreach}}
 
