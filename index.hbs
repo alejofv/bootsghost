@@ -11,17 +11,16 @@
     
         <div class="row">
             <div class="col-xs-2">
-                <h3>
-                    {{date format="DD"}}
-                    <br />
-                    <small>{{date format="MMM"}}</small>
-                    <time datetime="{{date format='YYYY-MM-DD'}}"></time>
-                </h3>
+                <div class=" index-date">
+                    <span class="label label-primary">{{date format="DD"}} <small>{{date format="MMM"}}</small>
+                        <time datetime="{{date format='YYYY-MM-DD'}}"></time>
+                    </span>
+                </div>
             </div>
             <div class="col-xs-10">
-                <article class="">
+                <article>
                     <header class="post-header">
-                        <h1 class="post-title"><a href="{{url}}">{{{title}}}</a></h1>
+                        <h2><a href="{{url}}">{{{title}}}</a></h2>
                         <p class="text-right"><span class="post-meta">{{tags separator=" · "}}</span></p>
                     </header>
                 </article>
