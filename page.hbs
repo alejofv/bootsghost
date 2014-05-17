@@ -9,13 +9,19 @@
 
         {{#post}}
 
-            <div class="post-header">
-                <p class="pull-right">
-                    <a class="btn btn-default" href="/"><small><i class="fa fa-angle-left"></i>&nbsp;Back to overview</small></a>
-                </p>
-                <h2>{{{title}}}</h2>
-                <br />
+        <div class="post-header">
+            <div class="row">
+                <div class="col-xs-10">
+                    <h2>{{{title}}}</h2>
+                    <p><br /></p>
+                </div>
+                <div class="col-xs-2 text-right">
+                    <p class="h2">
+                        <a class="btn btn-info" href="/"><i class="fa fa-angle-double-left"></i><span class="hidden-xs hidden-sm">&nbsp;All posts</span></a>
+                    </p>
+                </div>
             </div>
+        </div>
         
         <section class="post-content">
             {{content}}
@@ -33,6 +39,9 @@
                                     <h4>{{author.name}}</h4>
                                 {{/if}}
                                 <p class="bio">{{author.bio}}</p>
+                                
+                                {{> social-links }}
+                                
                                 <ul class="author-meta clearfix">
                                     {{#if author.location}}<li>{{author.location}}</li>{{/if}}
                                 </ul>

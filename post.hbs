@@ -11,16 +11,22 @@
         {{#post}}
 
             <div class="post-header">
-                <p class="pull-right">
-                    <a class="btn btn-default" href="/"><small><i class="fa fa-angle-left"></i>&nbsp;Back to overview</small></a>
-                </p>
-                <h2>{{{title}}}</h2>
+                <div class="row">
+                    <div class="col-xs-10">
+                        <h2>{{{title}}}</h2>
 
-                <div class="post-meta">
-                    <p>
-                        <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
-                        {{tags separator="&nbsp;&bull;&nbsp;" prefix="&nbsp;&bull;&nbsp;Tags: "}}
-                    </p>
+                        <div class="post-meta">
+                            <p>
+                                <time datetime="{{date format="YYYY-MM-DD"}}">{{date format='DD MMM YYYY'}}</time>
+                                {{tags separator="&nbsp;&bull;&nbsp;" prefix="&bull;&nbsp;"}}
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-xs-2 text-right">
+                        <p class="h2">
+                            <a class="btn btn-info" href="/"><i class="fa fa-angle-double-left"></i><span class="hidden-xs hidden-sm">&nbsp;All posts</span></a>
+                        </p>
+                    </div>
                 </div>
             </div>
 
@@ -30,40 +36,52 @@
 
             <footer class="post-footer">
                 <div class="row">
-                    <div class="col-sm-10 col-sm-offset-1">
-                    <section class="author">
-                        <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
-                        <div class="author-info">
-                            {{#if author.website}}
-                                <h4><a href="{{author.website}}"></a>{{author.name}}</h4>
-                            {{else}}
-                                <h4>{{author.name}}</h4>
-                            {{/if}}
-                            <p class="bio">{{author.bio}}</p>
-                            <ul class="author-meta clearfix">
-                                {{#if author.location}}<li>{{author.location}}</li>{{/if}}
-                            </ul>
-                            </div>
-                    </section>
-
-                    <p class="pull-right">
-                        <a class="btn btn-default" href="/"><small><i class="fa fa-angle-left"></i>&nbsp;Back to overview</small></a>
-                    </p>
-                    <div class="share">
-                        <p>Share this post: </p>
-                        <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
-                            onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
-                            <span class="hidden">Twitter</span>
-                        </a>
-                        <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
-                            onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
-                            <span class="hidden">Facebook</span>
-                        </a>
-                        <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
-                           onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
-                            <span class="hidden">Google+</span>
-                        </a>
+                    <div class="col-sm-1 hidden-xs">
                     </div>
+                    <div class="col-sm-10">
+                        <section class="author">
+                            <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
+                            <div class="author-info">
+                                {{#if author.website}}
+                                    <h4><a href="{{author.website}}">{{author.name}}</a></h4>
+                                {{else}}
+                                    <h4>{{author.name}}</h4>
+                                {{/if}}
+                                <p class="bio">{{author.bio}}</p>
+                                
+                                {{> social-links }}
+                                
+                                <ul class="author-meta clearfix">
+                                    {{#if author.location}}<li>{{author.location}}</li>{{/if}}
+                                </ul>
+                                
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-sm-8 col-xs-10 col-sm-offset-1">
+                        <div class="share">
+                            <p>Share this post: </p>
+                            <a class="icon-twitter" href="https://twitter.com/share?text={{encode title}}&amp;url={{url absolute="true"}}"
+                                onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                                <span class="hidden">Twitter</span>
+                            </a>
+                            <a class="icon-facebook" href="https://www.facebook.com/sharer/sharer.php?u={{url absolute="true"}}"
+                                onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                                <span class="hidden">Facebook</span>
+                            </a>
+                            <a class="icon-google-plus" href="https://plus.google.com/share?url={{url absolute="true"}}"
+                               onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                                <span class="hidden">Google+</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-xs-2">
+                        <p class="text-right">
+                            <a class="btn btn-info" href="/"><small><i class="fa fa-angle-double-left"></i><span class="hidden-xs hidden-sm">&nbsp;All posts</span></small></a>
+                        </p>
                     </div>
                 </div>
             </footer>

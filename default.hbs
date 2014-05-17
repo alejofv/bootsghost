@@ -19,7 +19,7 @@
 
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Noto+Serif:400,700,400italic|Open+Sans:700,400" />
     
-    <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/simplex/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootswatch/3.1.1/lumen/bootstrap.min.css" rel="stylesheet">
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script type="text/javascript" src="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
@@ -34,17 +34,17 @@
     <div class="container container-fluid">
         <!-- Example row of columns -->
         <div class="row">
-            <div class="col-sm-3" style="text-align: center">
+            <div class="col-sm-2" style="text-align: center">
                 <div>
                     <h2><a href="/">{{@blog.title}}</a></h2>
                     <p>{{@blog.description}}</p>
                 </div>
-                <hr />
+                <br />
                 <div>
-                    <p>{{> social-links}}</p>
+                    {{> static-links}}
                 </div>
             </div>
-            <div class="col-sm-8 col-sm-offset-1">
+            <div class="col-sm-9 col-sm-offset-1">
                 {{! Everything else gets inserted here }}
                 {{{body}}}
             </div>

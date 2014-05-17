@@ -636,7 +636,7 @@ margin on the iframe, cause it breaks stuff. */
     font-family: 'Open Sans', sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
-    text-align: right;
+    text-align: center;
 }
 
 .ghost-pagination a {
@@ -684,20 +684,19 @@ margin on the iframe, cause it breaks stuff. */
     padding: 4rem 0;
     border-top: #EBF2F6 1px solid;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     line-height: 1.7em;
-    color: #BBC7CC;
+    color: #50585D;
     text-align: center;
-    background: #F7FAFB;
 }
 
 .site-footer a {
-    color: #BBC7CC;
-    text-decoration: underline;
+    color: #50585D;
+    text-decoration: none;
 }
 
 .site-footer a:hover {
-    color: #50585D;
+    text-decoration: underline;
 }
 
 .poweredby .icon-ghost {
@@ -856,7 +855,7 @@ margin on the iframe, cause it breaks stuff. */
    11. Media Queries - Smaller than 500px
    ========================================================================== */
 
-
+/*
 @media only screen and (max-width: 500px) {
 
     .blog-logo img {
@@ -919,10 +918,10 @@ margin on the iframe, cause it breaks stuff. */
 
     .post-content .full-img {
         width: auto;
-        width: calc(100% + 32px); /* expand with to image + margins */
-        margin: 0 -16px; /* get rid of margins */
+        width: calc(100% + 32px); /* expand with to image + margins *
+        margin: 0 -16px; /* get rid of margins *
         min-width: 0;
-        max-width: 112%; /* fallback when calc doesn't work */
+        max-width: 112%; /* fallback when calc doesn't work *
     }
 
     .post-meta {

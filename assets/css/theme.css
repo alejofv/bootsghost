@@ -11,13 +11,20 @@ hr.post-index {
     margin: 1.8em 0;
 }
 
-.blog-meta a {
-    color: #BBC7CC;
-    font-size: 1.5em;
+.social-links {
     display: inline-block;
-    margin: 0.3em 0.5em;
+    border-top: #BBC7CC 1px solid;
 }
-.blog-meta a:hover {
+
+.social-links a {
+    font-size: 1.5em;
+    text-align: left;
+    display: inline-block;
+    margin: 0 0.5rem;
+    line-height: 2em;
+}
+
+.social-links a:hover {
     text-decoration: none;
 }
 

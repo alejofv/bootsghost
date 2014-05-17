@@ -1,9 +1,14 @@
 <nav class="ghost-pagination" role="navigation">
+    <ul class="pager">
     {{#if prev}}
-        <a class="newer-posts" href="{{page_url prev}}">Newer</a>&nbsp;&nbsp;·&nbsp;&nbsp;
+            <li class="previous">
+                <a class="newer-posts" href="{{page_url prev}}">Newer</a>
+            </li>
     {{/if}}
-    <span class="page-number">Page {{page}} of {{pages}}</span>
     {{#if next}}
-        &nbsp;&nbsp;·&nbsp;&nbsp;<a class="older-posts" href="{{page_url next}}">Older</a>
+            <li class="next">
+                <a class="older-posts" href="{{page_url next}}">Older</a>
+            </li>
     {{/if}}
+    </ul>
 </nav>
