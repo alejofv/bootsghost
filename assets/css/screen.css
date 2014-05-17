@@ -680,7 +680,7 @@ margin on the iframe, cause it breaks stuff. */
 
 .site-footer {
     position: relative;
-    margin: 8rem 0 0 0;
+    margin: 2rem 0 0 0;
     padding: 4rem 0;
     border-top: #EBF2F6 1px solid;
     font-family: 'Open Sans', sans-serif;
