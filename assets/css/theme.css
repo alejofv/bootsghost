@@ -21,27 +21,76 @@ hr.post-index {
     text-decoration: none;
 }
 
-.post-meta-text {
-    color: #b3b3b1;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 0.8em;
-    margin: 0.5em 0 1em 0;
+code, tt {
+    color: #fff;
+    border-color: #333;
+    background-color: #333;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-weight: bold;
+    
+    border-radius: 0.3rem;
+    padding: 2px 4px;
+    top: -1px;
+    position: relative;
 }
 
-.post .author-image {
-    display: inline-block;
-    width: 25px;
-    height: 25px;
-    line-height: 25px;
-    margin-right: 8px;
-    margin-bottom: -10px;
+pre {
+    color: #fff;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    border: 0px solid #333;
+    width: 100%;
+    padding: 10px;
+    font-family: Inconsolata, monospace, sans-serif;
+    font-size: 0.9em;
+    white-space: pre;
+    overflow: auto;
+    background: #333;
+    border-radius: 1rem;
+}
+
+pre code, tt {
+    font-size: inherit;
+    white-space: -moz-pre;
+    white-space: pre;
+    word-wrap: normal;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
+
+.post-footer .author {
+    margin: 0 0 8rem 0;
+}
+
+.post-footer .author-image {
+    display: block;
+    width: 100px;
+    height: 100px;
     float: left;
     background-size: cover;
     border-radius: 100%;
     text-indent: -9999px;
 }
 
-.post .author-name {
-    display: inline;
+.post-footer .author-info {
+    display: block;
+    margin: 0 0 0 140px;
+}
+
+.post-footer .share {
+    line-height: 0.5em;
+}
+
+.post-footer .share a {
+    font-size: 1.8rem;
+    display: inline-block;
+    margin: 0 1.5rem 0 0;
+    color: #666;
+    text-decoration: none;
+}
+
+.post-footer .share a:hover {
+    color: #50585D;
 }
