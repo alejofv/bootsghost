@@ -10,17 +10,7 @@
         {{#post}}
 
         <div class="post-header">
-            <div class="row">
-                <div class="col-xs-10">
-                    <h2>{{{title}}}</h2>
-                    <p><br /></p>
-                </div>
-                <div class="col-xs-2 text-right">
-                    <p class="h2">
-                        <a class="btn btn-info" href="/"><i class="fa fa-angle-double-left"></i><span class="hidden-xs hidden-sm">&nbsp;All posts</span></a>
-                    </p>
-                </div>
-            </div>
+            <h2>{{{title}}}</h2>
         </div>
         
         <section class="post-content">
@@ -34,7 +24,7 @@
                             <div class="author-image" style="background-image: url({{author.image}})">Blog Logo</div>
                             <div class="author-info">
                                 {{#if author.website}}
-                                    <h4><a href="{{author.website}}"></a>{{author.name}}</h4>
+                                    <h4><a href="{{author.website}}" rel="author"></a>{{author.name}}</h4>
                                 {{else}}
                                     <h4>{{author.name}}</h4>
                                 {{/if}}
@@ -45,10 +35,19 @@
                                 <ul class="author-meta clearfix">
                                     {{#if author.location}}<li>{{author.location}}</li>{{/if}}
                                 </ul>
-                                </div>
+                            </div>
                         </section>
                     </div>
                 </div>
+            
+                <div class="row">
+                    <div class="col-sm-11">
+                        <p class="text-right">
+                            <a class="btn btn-info" href="/"><small><i class="fa fa-angle-double-left"></i><span class="hidden-xs">&nbsp;All posts</span></small></a>
+                        </p>
+                    </div>
+                </div>
+
             </footer>
 
         {{/post}}

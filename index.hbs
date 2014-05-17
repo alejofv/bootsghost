@@ -21,13 +21,15 @@
                 <article>
                     <header class="post-header">
                         <h2><a href="{{url}}">{{{title}}}</a></h2>
-                        <p class="text-right"><span class="post-meta">{{tags separator=" · "}}</span></p>
+                        {{tags separator=" · " prefix="<div class='post-meta text-right'>" postfix="</div>"}}
                     </header>
                 </article>
             </div>
         </div>
-
-        <hr class="post-index" />
+        {{#if @last}}
+        {{else}}
+            <hr class="post-index" />
+        {{/if}}
 
     {{/foreach}}
 
