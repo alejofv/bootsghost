@@ -105,3 +105,10 @@ pre code, tt {
 .post-footer .share a:hover {
     color: #50585D;
 }
+
+.post-comments {
+    position: relative;
+    margin: 4rem 0 0 0;
+    padding: 2rem 2rem 0 2rem;
+    border-top: #EBF2F6 1px solid;
+}
