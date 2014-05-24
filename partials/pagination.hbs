@@ -1,14 +1,15 @@
-<nav class="ghost-pagination" role="navigation">
-    <ul class="pager">
-    {{#if prev}}
-            <li class="previous">
-                <a class="newer-posts" href="{{page_url prev}}">Newer</a>
-            </li>
-    {{/if}}
-    {{#if next}}
-            <li class="next">
-                <a class="older-posts" href="{{page_url next}}">Older</a>
-            </li>
-    {{/if}}
-    </ul>
+<nav class="ghost-pagination row" role="navigation">
+    <div class="col-xs-5 text-right">
+        {{#if prev}}
+            <a href="{{page_url prev}}"><i class="fa fa-angle-left"></i> Newer</a>
+        {{/if}} 
+    </div>
+    <div class="col-xs-2 text-center">
+        <span class="label label-default page-number"><span class="hidden-xs">Page </span>{{page}} of {{pages}}</span>
+    </div>
+    <div class="col-xs-5 text-left">
+        {{#if next}}
+            <a href="{{page_url next}}">Older <i class="fa fa-angle-right"></i></a>
+        {{/if}}
+    </div>
 </nav>

@@ -638,41 +638,6 @@ margin on the iframe, cause it breaks stuff. */
     text-align: center;
 }
 
-.ghost-pagination a {
-    color: #9EABB3;
-}
-
-/* Push the previous/next links out to the left/right */
-.older-posts,
-.newer-posts {
-    position: absolute;
-    display: inline-block;
-    padding: 0 15px;
-    border: #EBF2F6 2px solid;
-    text-decoration: none;
-    border-radius: 30px;
-    transition: border ease 0.3s;
-}
-
-.older-posts {
-    right: 0;
-}
-
-.page-number {
-    display: inline-block;
-    padding: 2px 0;
-}
-
-.newer-posts {
-    left: 0;
-}
-
-.older-posts:hover,
-.newer-posts:hover {
-    border-color: #9EABB3;
-}
-
-
 /* ==========================================================================
    9. Footer - The bottom of every page
    ========================================================================== */

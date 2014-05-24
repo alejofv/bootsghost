@@ -8,25 +8,43 @@
     
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
-    
-        <div class="row">
-            <div class="col-sm-2">
-                <div class=" index-date">
-                    <span class="label label-primary">{{date format="DD"}} <small>{{date format="MMM"}}</small>
-                        <time datetime="{{date format='YYYY-MM-DD'}}"></time>
-                    </span>
+        {{#has tag="Quote"}}
+            {{log this}}
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="index-quote">
+                        <a href="{{url}}">
+                            <p>{{{title}}}:</p>
+                            {{content}}
+                        </a>
+                    </div>
+                    <div class='post-meta text-right'>
+                        {{tags separator=" · "}}
+                    </div>
                 </div>
             </div>
-            <div class="col-sm-10">
-                <article>
-                    <header class="post-header">
-                        <h1><a href="{{url}}">{{{title}}}</a></h1>
-                        {{tags separator=" · " prefix="<div class='post-meta text-right'>" postfix="</div>"}}
-                    </header>
-                </article>
+        {{else}}
+            <div class="row">
+                <div class="col-sm-2">
+                    <div class="index-date">
+                        <span class="label label-primary">{{date format="DD"}} <small>{{date format="MMM"}}</small>
+                            <time datetime="{{date format='YYYY-MM-DD'}}"></time>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-sm-10">
+                    <article>
+                        <header class="post-header">
+                            <h1><a href="{{url}}">{{{title}}}</a></h1>
+                            {{tags separator=" · " prefix="<div class='post-meta text-right'>" postfix="</div>"}}
+                        </header>
+                    </article>
+                </div>
             </div>
-        </div>
+        {{/has}}
+        
         {{#if @last}}
+            {{! Nothing here :) }}
         {{else}}
             <hr class="post-index" />
         {{/if}}

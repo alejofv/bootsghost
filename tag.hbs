@@ -8,7 +8,7 @@
 
     <header class="tag-archive-header row">
         <div class="col-xs-10">
-            <h4>Posts with tag: <strong>{{tag.name}}</strong></h4>
+            <span class="lead">Posts with tag: <strong>{{tag.name}}</strong></span>
         </div>
         <div class="col-xs-2 text-right">
             <p>
@@ -20,25 +20,44 @@
     {{! Each post will be output using this markup }}
     {{#foreach posts}}
 
-        <div class="row">
-            <div class="col-xs-2">
-                <div class=" index-date">
-                    <span class="label label-primary">{{date format="DD"}} <small>{{date format="MMM"}}</small>
-                        <time datetime="{{date format='YYYY-MM-DD'}}"></time>
-                    </span>
+        {{#has tag="Quote"}}
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="index-quote">
+                        <a href="{{url}}">
+                            <p>{{{title}}}:</p>
+                            {{content}}
+                        </a>
+                    </div>
+                    <div class='post-meta text-right'>
+                        {{tags separator=" · "}}
+                    </div>
                 </div>
             </div>
-            <div class="col-xs-10">
-                <article>
-                    <header class="post-header">
-                        <h2><a href="{{url}}">{{{title}}}</a></h2>
-                        {{tags separator=" · " prefix="<div class='post-meta text-right'>" postfix="</div>"}}
-                    </header>
-                </article>
+        {{else}}
+            <div class="row">
+                <div class="col-xs-2">
+                    <div class=" index-date">
+                        <span class="label label-primary">{{date format="DD"}} <small>{{date format="MMM"}}</small>
+                            <time datetime="{{date format='YYYY-MM-DD'}}"></time>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-10">
+                    <article>
+                        <header class="post-header">
+                            <h2><a href="{{url}}">{{{title}}}</a></h2>
+                            {{tags separator=" · " prefix="<div class='post-meta text-right'>" postfix="</div>"}}
+                        </header>
+                    </article>
+                </div>
             </div>
-        </div>
-
-        <hr class="post-index" />
+        {{/has}}
+        {{#if @last}}
+            {{! Nothing here :) }}
+        {{else}}
+            <hr class="post-index" />
+        {{/if}}
 
     {{/foreach}}
 

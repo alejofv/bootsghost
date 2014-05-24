@@ -11,8 +11,20 @@ hr.post-index {
 }
 
 .index-date {
-    text-align: left    ;
+    text-align: left;
     margin: 1.8em 0;
+}
+
+.index-quote {
+    padding: 2em 2em 0;
+}
+
+.index-quote a {
+    color: #50585D;
+}
+
+.index-quote a:hover {
+    color: #158cba;
 }
 
 .social-links {
@@ -111,4 +123,8 @@ pre code, tt {
     margin: 4rem 0 0 0;
     padding: 2rem 2rem 0 2rem;
     border-top: #EBF2F6 1px solid;
+}
+
+.page-number {
+    font-size: 1.3rem;
 }
