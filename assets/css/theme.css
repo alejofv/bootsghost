@@ -1,5 +1,16 @@
+body {
+    font-size: 1.65em;
+    font-family: 'Open Sans', MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3,
+h4, h5, h6 {
+    font-family: 'Oxygen', MundoSans, "Helvetica Neue", Arial, Helvetica, sans-serif;
+}
+
 h1 {
     font-size: 30px;
+    margin-top: 25px;
 }
 
 a:hover {
@@ -48,8 +59,8 @@ code, tt {
     color: #fff;
     border-color: #333;
     background-color: #333;
-    font-family: Inconsolata, monospace, sans-serif;
-    font-weight: bold;
+    font-family: 'Oxygen Mono', monospace, sans-serif;
+    font-weight: 400;
     
     border-radius: 0.3rem;
     padding: 2px 4px;
@@ -65,7 +76,7 @@ pre {
     border: 0px solid #333;
     width: 100%;
     padding: 10px;
-    font-family: Inconsolata, monospace, sans-serif;
+    font-family: 'Oxygen Mono', monospace, sans-serif;
     font-size: 0.9em;
     white-space: pre;
     overflow: auto;
